@@ -71,7 +71,7 @@ function asistencia($arg = false) {
         }
         
         if ($_POST) {
-            $count = $this->_db->exec("INSERT INTO Turnos (IdAprendiz,Fecha, TipoTurno, Area, Estado) VALUES ('" . $_POST['txtId'] . "','" . $_POST['TXTfecha'] . "', '" . $tipoturno . "','" . $area . "', 'A')");
+            $count = $this->_db->exec("INSERT INTO turnos (IdAprendiz,Fecha, TipoTurno, Area, Estado) VALUES ('" . $_POST['txtId'] . "','" . $_POST['TXTfecha'] . "', '" . $tipoturno . "','" . $area . "', 'A')");
             return $count;
         } else {
             return 0;

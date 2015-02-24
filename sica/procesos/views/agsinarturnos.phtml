@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-success">
+            <div class="panel panel-success sombra">
                 <div class="panel-heading"><h3 class="text-center"><strong>Asignar Turnos Emprecefa</strong></h3></div>
                 <div class="panel-body">
                     <form id="form1" name="form1" class="" data-toggle="modal" role="form" action="" method="post">
@@ -43,7 +43,7 @@
                             <h2 class="text-center"><?php echo $this->datos[0] ['Nomtitu']; ?></h2>
                         <?php else: ?>
 
-                            <h4 class="text-center text-danger">no hay titulacion seleccionada o no existe en la base de datos</h4>
+                            <h4 class="text-center text-danger">----Seleccione Titulacion----</h4>
 
                         <?php endif; ?> 
                         <div class="col-md-12 ">
@@ -59,7 +59,7 @@
                                     <tbody>
                                         <?php for ($i = 0; $i < count($this->datos); $i++): ?>
                                             <tr>                         
-                                                <input type="hidden"<?php echo $this->datos[$i] ['Id']; ?>>
+                                                <input type="hidden"name="txtId" id="txtId"value="<?php echo $this->datos[$i] ['Id']; ?>"/>
                                                 <td class="" ><?php echo $this->datos[$i] ['Nomapren']; ?></td>
                                                 <td><?php echo $this->datos[$i] ['ideapren']; ?></td>
                                                 <td class="text-center">Seleccione Area <select id="cmbTipoUnidad" name="cmbTipoUnidad">
@@ -132,7 +132,7 @@
 
 
                             </div>
-
+                            
                         </div>
                     </form>
                 </div>
