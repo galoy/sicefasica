@@ -55,7 +55,7 @@ function asistencia($arg = false) {
         } else {
             $fecha = 0;
         }
-        $sql = $this->_db->query("SELECT  usuarios.Nombre AS nombreaprendiz FROM usuarios INNER JOIN turnos ON usuarios.Id=turnos.IdAprendiz WHERE turnos.Area='" . $area ."' AND turnos.Estado='A'");
+        $sql = $this->_db->query("SELECT  usuarios.Nombre AS nombreaprendiz FROM usuarios INNER JOIN turnos ON usuarios.Id=turnos.IdAprendiz WHERE turnos.Area='" . $area ."' AND turnos.Fecha='" . $fecha ."' AND turnos.Estado='A'");
         return $sql->fetchall();
     }
     function guardarturno($arg = false){
@@ -71,7 +71,7 @@ function asistencia($arg = false) {
         }
         
         if ($_POST) {
-            $count = $this->_db->exec("INSERT INTO turnos (IdAprendiz,Fecha, TipoTurno, Area, Estado) VALUES ('" . $_POST['txtId'] . "','" . $_POST['TXTfecha'] . "', '" . $tipoturno . "','" . $area . "', 'A')");
+            $count = $this->_db->exec("INSERT INTO turnos (IdAprendiz,Fecha, TipoTurno, Area, Estado) VALUES ('" . $_POST['txtId'] . "','" . $_POST['txtFecha1'] . "', '" . $tipoturno . "','" . $area . "', 'A')");
             return $count;
         } else {
             return 0;

@@ -6,7 +6,20 @@ class Menu extends Model {
         parent::__construct();
     }
 
-    function get($arg = false) {
+    function fechaactual(){
+        $sql = $this->_db->query("SELECT CURDATE() as fecha");
+        $res=$sql->fetchall();
+        return $res[0]['fecha'];
+    }
+    
+    function horaactual(){
+        $sql = $this->_db->query("select CURTIME() as hora");
+        $res=$sql->fetchall();
+        return $res[0]['hora'];
+    }
+    
+            
+    function menurol($arg = false) {
         $subturnos = array(
             array(
                 'titulo' => 'Rutinarios',

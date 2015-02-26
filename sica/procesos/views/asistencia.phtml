@@ -19,12 +19,8 @@
                             
                             <div class="col-md-4">
                                 <label>Fecha</label>
-                                <select id="cmbfecha" name="cmbfecha" >
-                                    <option disabled="disabled" value="" selected="">--aaa/mmm/ddd---</option>
-                                    <?php for ($i = 0; $i < count($this->datos); $i++): ?>
-                                        <option value="<?php echo $this->datos[$i] ['Fecha']; ?>"><?php echo $this->datos[$i] ['Fecha']; ?></option>
-                                    <?php endfor; ?>
-                                </select>
+                                <input id="cmbfecha" type="date" name="cmbfecha" value="<?php echo Funcionesphp::fechaservidor();?>" >
+                                   
                             </div>
                             <div class="col-md-4">
                                 <label>Area</label>
@@ -45,6 +41,7 @@
                                             <th>Nombre Del Aprendiz</th>
                                             <th>Asistencia</th>
                                             <th>Observaciones</th>
+                                            <th>Evidencia</th>
                                         </tr>        
                                     </thead>
                                     <tbody>
@@ -61,7 +58,7 @@
 
                                             </label></td>
                                             <td class="" ><textarea class="col-md-12" name="" id=""></textarea></td>
-                                                
+                                            <td class="" ><input name="imajen" type="file"></td>   
                                             </tr>
                                         <?php endfor; ?>
                                     </tbody>

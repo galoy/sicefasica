@@ -33,9 +33,10 @@ class procesosController extends Controller {
             echo "<script>alert('Turnos Guardados')</script>";
             $this->index();
         } else {
-            echo "<script>alert('No se puede guardar los turnos')</script>";
+            
+            echo "<script>alert('No se puede guardar los Turnos')</script>";
             $this->index();
-            $this->_view->renderizar('agsinarturnos', 'sica');
+            
         }
     }
 

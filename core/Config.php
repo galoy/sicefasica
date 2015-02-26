@@ -79,4 +79,12 @@ class Funcionesphp {
         header("Pragma: no-cache");
     }
 
+    public static function fechaservidor() {
+        $men = new Menu;
+        return $men->fechaactual();
+    }
+    public static function horaservidor() {
+        $men = new Menu;
+        return $men->horaactual();
+    }
 }

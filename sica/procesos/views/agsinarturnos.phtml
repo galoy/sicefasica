@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label>Fecha</label>
-                                    <input class="" type="date"  id="TXTfecha" name="TXTfecha">
+                                    <input class="" type="date"  id="txtFecha1" name="txtFecha1">
                                 </div>
                                 <div class="col-md-4">
                                     <label>Tipo de Turno</label>
@@ -59,18 +59,18 @@
                                     <tbody>
                                         <?php for ($i = 0; $i < count($this->datos); $i++): ?>
                                             <tr>                         
-                                                <input type="hidden"name="txtId" id="txtId"value="<?php echo $this->datos[$i] ['Id']; ?>"/>
-                                                <td class="" ><?php echo $this->datos[$i] ['Nomapren']; ?></td>
-                                                <td><?php echo $this->datos[$i] ['ideapren']; ?></td>
-                                                <td class="text-center">Seleccione Area <select id="cmbTipoUnidad" name="cmbTipoUnidad">
-                                                        <option disabled="disabled" value="" selected="">---Seleccione---</option>
-                                                        <?php for ($j = 0; $j < count($this->areas); $j++): ?>
-                                                            <option value="<?php echo $this->areas[$j] ['Id']; ?>" ><?php echo $this->areas[$j] ['Nombre']; ?></option>
-                                                        <?php endfor; ?>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        <?php endfor; ?>
+                                        <input type="hidden"name="txtId" id="txtId"value="<?php echo $this->datos[$i] ['Id']; ?>"/>
+                                        <td class="" ><?php echo $this->datos[$i] ['Nomapren']; ?></td>
+                                        <td><?php echo $this->datos[$i] ['ideapren']; ?></td>
+                                        <td class="text-center">Seleccione Area <select id="cmbTipoUnidad" name="cmbTipoUnidad">
+                                                <option disabled="disabled" value="" selected="">---Seleccione---</option>
+                                                <?php for ($j = 0; $j < count($this->areas); $j++): ?>
+                                                    <option value="<?php echo $this->areas[$j] ['Id']; ?>" ><?php echo $this->areas[$j] ['Nombre']; ?></option>
+                                                <?php endfor; ?>
+                                            </select>
+                                        </td>
+                                        </tr>
+                                    <?php endfor; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -132,7 +132,7 @@
 
 
                             </div>
-                            
+
                         </div>
                     </form>
                 </div>
