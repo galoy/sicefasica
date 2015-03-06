@@ -16,7 +16,7 @@ define('APP_COMPANY', ' - SENA Equipo ADSI');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '123');
-define('DB_NAME', 'sica');
+define('DB_NAME', 'sicefaoo');
 define('DB_CHAR', 'utf8');
 
 //aqui se definen las librerias y frameworks js y css
@@ -25,6 +25,8 @@ $icn = "<link rel='icon' href='" . COMMON . "img/favicon.ico'>";
 define('ICON', $icn);
 $jqy = "<script src='" . COMMON . "jquery/jquery-2.1.3.min.js'></script>";
 define('FW_JQUERY', $jqy);
+$jqip = "<script src='" . COMMON . "printpage/jquery.printPage.js'></script>";
+define('LIB_PRINT', $jqip);
 $boot = "<link href='" . COMMON . "bootstrap/css/bootstrap.min.css' rel='stylesheet'>
         <script src='" . COMMON . "bootstrap/js/bootstrap.min.js'></script>";
 define('FW_BOOTSTRAP', $boot);
@@ -44,13 +46,14 @@ $alert = "<link href='" . COMMON . "jalerts/jquery.alerts.css' rel='stylesheet'>
         . "<script src='" . COMMON . "jalerts/jquery.ui.draggable.js'></script>"
         . "<script src='" . COMMON . "jalerts/jquery.alerts.mod.js'></script>";
 define('LIB_JALERTS', $alert);
-
-
+$jqy = "<script src='" . COMMON . "js/ajax.js'></script>";
+define('LIB_AJAX', $jqy);
 
 $jsv = "<script src='" . COMMON . "js/page.js'></script>";
 define('JS_PAGE', $jsv);
 $boot = "<link href='" . COMMON . "css/general.css' rel='stylesheet'>";
 define('CSS_GENERAL', $boot);
+
 
 class Funcionesphp {
 
