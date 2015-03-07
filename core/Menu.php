@@ -5,8 +5,7 @@ class Menu extends Model {
     public function __construct() {
         parent::__construct();
     }
-
-     function fechaactual(){
+function fechaactual(){
         $sql = $this->_db->query("SELECT CURDATE() as fecha");
         $res=$sql->fetchall();
         return $res[0]['fecha'];
@@ -16,7 +15,8 @@ class Menu extends Model {
         $sql = $this->_db->query("select CURTIME() as hora");
         $res=$sql->fetchall();
         return $res[0]['hora'];
-    }      
+    }    
+           
     function menurol($arg = false) {
         $subturnos = array(
             array(

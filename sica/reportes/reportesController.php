@@ -7,7 +7,7 @@ class reportesController extends Controller {
     }
 
     public function index() {
-    $this->_view->titulo = 'reportes';
+    $this->_view->titulo = 'Reportes';
         $this->_view->renderizar('inicio', 'sica');
     }
     public function imprimir() {

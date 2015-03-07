@@ -25,8 +25,6 @@ $icn = "<link rel='icon' href='" . COMMON . "img/favicon.ico'>";
 define('ICON', $icn);
 $jqy = "<script src='" . COMMON . "jquery/jquery-2.1.3.min.js'></script>";
 define('FW_JQUERY', $jqy);
-$jqip = "<script src='" . COMMON . "printpage/jquery.printPage.js'></script>";
-define('LIB_PRINT', $jqip);
 $boot = "<link href='" . COMMON . "bootstrap/css/bootstrap.min.css' rel='stylesheet'>
         <script src='" . COMMON . "bootstrap/js/bootstrap.min.js'></script>";
 define('FW_BOOTSTRAP', $boot);
@@ -48,6 +46,8 @@ $alert = "<link href='" . COMMON . "jalerts/jquery.alerts.css' rel='stylesheet'>
 define('LIB_JALERTS', $alert);
 $jqy = "<script src='" . COMMON . "js/ajax.js'></script>";
 define('LIB_AJAX', $jqy);
+$jpt = "<script src='" . COMMON . "printpage/jquery.printPage.js'></script>";
+define('LIB_PRINT', $jpt);
 
 $jsv = "<script src='" . COMMON . "js/page.js'></script>";
 define('JS_PAGE', $jsv);

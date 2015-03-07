@@ -13,7 +13,7 @@ class parametrosController extends Controller {
         $this->_view->renderizar('inicio', 'sica');
     }
 
-    public function viewtrimestre($argum = false) {
+    public function viewturno($argum = false) {
 
         $this->_view->titulo = 'Turnos Emprecefa';
         $this->_view->titulopanel = 'Agregar tipo de turnos';
@@ -27,7 +27,7 @@ class parametrosController extends Controller {
         $this->_view->renderizar('viewturno', 'sica');
     }
 
-    public function savetrimestre() {
+    public function saveturno() {
         if ($_POST) {
             $id = $_POST['txtId'];
         } else {
@@ -44,7 +44,7 @@ class parametrosController extends Controller {
         }
     }
 
-    public function deltrimestre($argum = false) {
+    public function deltipoturno($argum = false) {
         if ($argum == false) {
             echo "<script>alert('No hay registro a Eliminar')</script>";
             $this->index();

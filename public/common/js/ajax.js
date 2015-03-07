@@ -1,41 +1,24 @@
-function objetoAjax(){
-	var xmlhttp=false;
-	try {
-		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-	} catch (e) {
-		try {
-		   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		} catch (E) {
-			xmlhttp = false;
-  		}
-	}
 
-	if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-		xmlhttp = new XMLHttpRequest();
-	}
-	return xmlhttp;
-}
 
-function MostrarConsulta(datos){
-	divResultado = document.getElementById('resultado');
-	ajax=objetoAjax();
-	ajax.open("GET", datos);
-	ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-			divResultado.innerHTML = ajax.responseText
-		}
-	}
-	ajax.send(null)
-}
+function cargadivconsulta(id, url) {
+ $("#"+id).show();
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: "",
+        success: function (html) {
+            if (html == 'true') {
+               
+                 $("#"+id).html('No se encontro la pagina.');
+            }
+            else {
+                $("#"+id).html(html);
+            }
+        },
+        beforeSend: function ()
+        {
+            $("#"+id).html("<p class='text-center'><img src='../../public/common/img/ajax-loader.gif'></p>")
+        }
+    });
 
-function cargadivconsulta(id,archivo){
-	divResultado = document.getElementById(id);
-	ajax=objetoAjax();
-	ajax.open("GET", archivo);
-	ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-			divResultado.innerHTML = ajax.responseText
-		}
-	}
-	ajax.send(null)
 }
